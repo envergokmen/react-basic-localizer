@@ -1,6 +1,3 @@
-react simple localizer
-
-
 # react-basic-localizer
 
 ### A basic localization class for react
@@ -19,8 +16,10 @@ for formmatted text you can use ```{localizer.getWithFormat("NewField", "$Brand"
 import React from 'react';
 
 import sharedTranslations from "../Localizer/Translations/_Shared";
+import navTranslations from "../Localizer/Translations/_Shared";
 import {Localizer, Localize} from "../Localizer/Localizer";
 
+//here we can instantiate many or single file according to component
 var localizer = new Localizer([sharedTranslations, navTranslations]);
 
 const Home = props => (
@@ -35,7 +34,7 @@ const Home = props => (
 
           <h1>Usage 2,  use key with localizer instance and include variables by using getWithFormat </h1>
           <p> {localizer.getWithFormat("NewField", "$Name")} <p>
-          
+
       </div>
     </div>
   </div>
