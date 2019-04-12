@@ -25,23 +25,18 @@ var localizer = new Localizer([sharedTranslations, navTranslations]);
 const Home = props => (
 
   <div>
-    <BreadCrumb navs={[{ link: ``, text: localizer.get("Management") }]}></BreadCrumb>
-    <div id="MainListArea">
-      <div>
-
-         <h1>Usage 1,  use key or value directly</h1>
-         <Localize localizer={localizer}>Hello</Localize>
+         <h1>Usage 1,  use key of item to translate</h1>
+         <p><Localize localizer={localizer}>Hello</Localize></p>
 
           <h1>Usage 2,  use key with localizer instance and include variables by using getWithFormat </h1>
+          <p> {localizer.get("Welcome")} <p>
           <p> {localizer.getWithFormat("NewField", "$Name")} <p>
 
          <h1>Usage 3,  use translated version of text, it will replace with text in the current languange</h1>
-         <Localize localizer={localizer}>Such a nice weather we have today !</Localize>
+         <p> <Localize localizer={localizer}>Such a nice weather we have today !</Localize></p>
+         <p> {localizer.get("Such a nice weather we have today !")} <p>
 
-      </div>
-    </div>
   </div>
-
 
 
 );
