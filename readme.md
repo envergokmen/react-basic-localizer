@@ -16,7 +16,7 @@ for formmatted text you can use ```{localizer.getWithFormat("NewField", "$Brand"
 import React from 'react';
 
 import sharedTranslations from "../Localizer/Translations/_Shared";
-import navTranslations from "../Localizer/Translations/_Shared";
+import navTranslations from "../Localizer/Translations/Navigation";
 import {Localizer, Localize} from "../Localizer/Localizer";
 
 //here we can instantiate many or single file according to component
