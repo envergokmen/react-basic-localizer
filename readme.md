@@ -27,17 +27,18 @@ const Home = props => (
   <div>
          <h1>Usage 1,  use key of item to translate</h1>
          <p><Localize localizer={localizer}>Hello</Localize></p>
+         <p><Localize localizer={localizer} dynamic="Home Page">NewField</Localize></p> 
+         <p><Localize localizer={localizer} dynamic="$Name">NewField</Localize></p>
 
-          <h1>Usage 2,  use key with localizer instance and include variables by using getWithFormat </h1>
+          <h1>Usage 2, use key with localizer instance and include variables by using getWithFormat </h1>
           <p> {localizer.get("Welcome")} <p>
           <p> {localizer.getWithFormat("NewField", "$Name")} <p>
+          <p> {localizer.getWithFormat("NewField", "This value will replace variable inside translation")} <p> 
 
-         <h1>Usage 3,  use translated version of text, it will replace with text in the current languange</h1>
+         <h1>Usage 3,  use translated version of text, it will replace given text with text in the current languange</h1>
          <p> <Localize localizer={localizer}>Such a nice weather we have today !</Localize></p>
          <p> {localizer.get("Such a nice weather we have today !")} <p>
-
   </div>
-
 
 );
 
