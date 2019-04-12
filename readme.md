@@ -83,3 +83,18 @@ export default
 }
 
 ```
+
+
+##### Selected Lang
+Library currently use a method to determine selected lang please method ```GetSelectedLang()``` in Localizer.js.
+You can either change this method or pass selected when creating Localizer instance like below
+
+```javascript
+
+var YOUR_SELECTED_LANG = "EN";
+var YOUR_DEFAULT_LANG = "TR";
+
+import {Localizer, Localize} from "../Localizer/Localizer"; 
+var localizer = new Localizer([sharedTranslations, navTranslations], langCode: YOUR_SELECTED_LANG, defaultLang: YOUR_DEFAULT_LANG);
+
+```
